@@ -9,9 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "@next-auth/prisma-adapter": "^1.0.5",
+    "@prisma/client": "^4.9.0",
+    "@tanstack/react-query": "^4.20.2",
+    "@trpc/client": "^10.9.0",
+    "@trpc/next": "^10.9.0",
+    "@trpc/react-query": "^10.9.0",
+    "@trpc/server": "^10.9.0",
+    "capture-website": "^3.2.0",
+    "cheerio": "1.0.0-rc.12",
+    "date-fns": "^2.29.3",
+    "next": "^13.2.1",
+    "next-auth": "^4.19.0",
+    "superjson": "1.9.1",
+    "zod": "^3.20.6",
     "ui": "workspace:*"
   },
   "devDependencies": {
@@ -22,6 +35,8 @@
     "@types/node": "^17.0.12",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
+    "prisma": "^4.9.0",
+    "tailwindcss": "^3.2.0",
     "typescript": "^4.5.3"
   }
 }
