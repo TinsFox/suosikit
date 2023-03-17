@@ -4,6 +4,7 @@ import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 import { api } from "~/utils/api";
+import { env } from "~/env.mjs";
 
 const Home: NextPage = () => {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -80,6 +81,12 @@ const AuthShowcase: React.FC = () => {
       >
         {sessionData ? "Sign out" : "Sign in"}
       </button>
+      <Link
+        className="rounded-full bg-white/10 px-10 py-3 font-semibold text-white no-underline transition hover:bg-white/20"
+        href={`https://api.notion.com/v1/oauth/authorize?client_id=29aae2a2-f191-4042-aea3-a5fd217f9c2a&response_type=code&owner=user&redirect_uri=${env.NEXT_PUBLIC_NOTION_REDIRECT_URI}`}
+      >
+        Notion
+      </Link>
     </div>
   );
 };
