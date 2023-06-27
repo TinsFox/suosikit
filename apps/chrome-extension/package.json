@@ -1,22 +1,31 @@
 {
-  "name": "chrome-extension",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "@suosikit/chrome-extension",
+  "displayName": "Web clipper",
+  "version": "0.0.1",
+  "description": "save anything to suosikit",
+  "author": "TinsFox",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "plasmo": "0.76.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react-swc": "^3.0.0",
-    "typescript": "^4.9.3",
-    "vite": "^4.1.0"
+    "@types/chrome": "0.0.237",
+    "@types/node": "20.2.4",
+    "@types/react": "18.2.7",
+    "@types/react-dom": "18.2.4",
+    "prettier": "2.8.8",
+    "typescript": "5.0.4",
+    "@plasmohq/prettier-plugin-sort-imports": "3.6.4"
+  },
+  "manifest": {
+    "host_permissions": [
+      "https://*/*"
+    ]
   }
 }
