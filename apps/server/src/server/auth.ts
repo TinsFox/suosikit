@@ -54,6 +54,7 @@ export const authOptions: NextAuthOptions = {
     GithubProvider({
       clientId: env.GITHUB_ID,
       clientSecret: env.GITHUB_SECRET,
+      allowDangerousEmailAccountLinking: true,
     }),
     /**
      * ...add more providers here.
