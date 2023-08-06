@@ -3,9 +3,14 @@
   "exclude": ["node_modules"],
   "include": [".plasmo/index.d.ts", "./**/*.ts", "./**/*.tsx"],
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "~*": ["./*"]
-    },
-    "baseUrl": "."
+      "~*": ["./*"],
+      "config/*": ["./config"],
+      "@/*": ["./*"],
+      "routers/*": ["src/routers/*"],
+      "@/lib/*": ["./lib/*"],
+      "components/*": ["src/components/*"]
+    }
   }
 }
